@@ -11,7 +11,7 @@ Before running the eNSP installation executable, you should gather the following
 - WinPcap 4.1.3 (https://www.winpcap.org/install/bin/WinPcap_4_1_3.exe)
 - Wireshark 4.4.6 (https://2.na.dl.wireshark.org/win64/Wireshark-4.4.6-x64.exe)
 
-Having installed all the pre-requisites, download the eNSP installation executable (542.2 MB, the file may be too big for a virus scan, download at your own discretion). Check the release on the right hand side of this page, you should find a place to download the executable there.
+Having installed all the pre-requisites, download the eNSP installation executable (542.2 MB, the file may be too big for a virus scan, download at your own discretion). Check the release on the right hand side of this page, you should find a place to download the executable there. (https://github.com/horserosemilkshake/huawei-ensp/releases/tag/eNSP)
 
 The installation processes should be simple, just click "Next" all the way and it will work.
 
