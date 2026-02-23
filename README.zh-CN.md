@@ -23,8 +23,10 @@ https://github.com/horserosemilkshake/huawei-ensp/releases/tag/eNSP
 ## 运行
 大多数情况下，安装后的 eNSP 可以正常启动，但在启动路由设备时（几乎肯定）会出现 40 错误。
 ![v2-261ce6a291c33cc34cf0080bf9ed04d0_1440w](https://github.com/user-attachments/assets/6bf28278-c160-4770-87ed-c829f52adc6c)
+
 你可以在主界面中点击其中一个示例（如 1-1RIPv1&v2），拖拽选中所有设备，然后点击工具栏中的“Start Device”按钮测试是否出现此问题：
 ![image](https://github.com/user-attachments/assets/8cd8c8cb-324d-4ed0-aad6-ea4d99bbc0bd)
+
 解决 40 错误的步骤如下：
 
 关闭 Hyper-V（Windows 功能启用和关闭 > Hyper-V）：
