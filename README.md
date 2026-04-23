@@ -1,4 +1,4 @@
-# huawei-ensp |![中文](https://github.com/horserosemilkshake/huawei-ensp/blob/main/README.zh-CN.md)|
+# huawei-ensp | [中文](https://github.com/horserosemilkshake/huawei-ensp/blob/main/README.zh-CN.md) |
 
 ## Introduction
 Huawei eNSP (Enterprise Network Simulation Platform) is a network simulation tool designed for training and testing network configurations, particularly in enterprise environments. It allows users to create virtual network scenarios that replicate real-world configurations using Huawei's networking equipment. If you plan to take the HCIA/HCIP/HCIE certification exam, you can familiarize yourself with operating Huawei equipments (e.g., router, switch) on eNSP.
