@@ -13,8 +13,8 @@ https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.e
 WinPcap 4.1.3
 https://www.winpcap.org/install/bin/WinPcap_4_1_3.exe
 
-Wireshark 4.4.6
-https://2.na.dl.wireshark.org/win64/Wireshark-4.4.6-x64.exe
+Wireshark 4.4.3 
+https://2.na.dl.wireshark.org/win64/Wireshark-4.4.3-x64.exe
 
 安装好所有前置组件后，再下载 eNSP 安装程序（542.2 MB，文件可能过大无法进行病毒扫描，请自行斟酌）。在本页面右侧的 Release 中即可找到该安装文件：
 https://github.com/horserosemilkshake/huawei-ensp/releases/tag/eNSP
@@ -41,3 +41,53 @@ https://github.com/horserosemilkshake/huawei-ensp/releases/tag/eNSP
 
 重启电脑并以管理员身份运行 eNSP。
 这样应能解决 40 错误。
+
+## windows 11 下疯狂40错误解决办法
+如果你使用以上方式，仍然遇到40错误，hyper-v不能完全禁用，启动virtual box ar设备失败， 采用以下方法
+- 下载dgreadiness工具
+https://download.microsoft.com/download/b/d/8/bd821b1f-05f2-4a7e-aa03-df6c4f687b07/dgreadiness_v3.6.zip
+
+下载后解压， powershell管理员身份运行然后进入到解压目录
+
+- 执行
+```shell
+Set-ExecutionPolicy Unrestricted -Scope CurrentUser
+```
+此命令就是让你可以执行外部命令，不然工具执行会报错
+
+- 执行
+```shell
+.\DG_Readiness_Tool_v3.6.ps1 -Disable
+```
+
+- 你大致看到如下输出
+```output
+./DG_Readiness_Tool_v3.6.ps1 -Disable安全警告
+请只运行你信任的脚本。虽然来自 Internet 的脚本会有一定的用处，但此脚本可能会损坏你的计算机。如果你信任此脚本，请使用
+Unblock-File cmdlet 允许运行该脚本，而不显示此警告消息。是否要运行 E:\download\dgreeadiness\DG_Readiness_Tool_v3.6.ps1?
+[D] 不运行(D)  [R] 运行一次(R)  [S] 暂停(S)  [?] 帮助 (默认值为“D”): R目录: C:\Mode                 LastWriteTime         Length Name----                 -------------         ------ ----
+d-----         2026/5/14     15:30                DGLogs
+###########################################################################
+Readiness Tool Version 3.4 Release.
+Tool to check if your device is capable to run Device Guard and Credential Guard.
+###########################################################################
+Disabling Device Guard and Credential Guard
+Deleting RegKeys to disable DG/CG
+错误: 系统找不到指定的注册表项或值。
+错误: 系统找不到指定的注册表项或值。
+del : 找不到路径“C:\WINDOWS\System32\CodeIntegrity\SIPolicy.p7b”，因为该路径不存在。
+所在位置 行:1 字符: 1del  "$env:windir\System32\CodeIntegrity\SIPolicy.p7b"
+
+  + CategoryInfo          : ObjectNotFound: (C:\WINDOWS\Syst...ty\SIPolicy.p7b:String) [Remove-Item], ItemNotFoundEx
+ ception
+  + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+
+Disabling Hyper-V and IOMMU
+Disabling Hyper-V failed please check the log filePlease reboot the machine, for settings to be applied.
+```
+
+- 重启
+
+- 重启后进系统前系统会提示你要不要禁用虚拟化安全balabala， 共2个选项，全部选择禁用
+
+- 然后点开virtual box，启动一个ar试试，成功即告别40错误。
