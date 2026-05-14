@@ -9,7 +9,7 @@ After 2019, Huawei has paused sharing eNSP for strategic reasons. A "professiona
 Before running the eNSP installation executable, you should gather the following pre-requisites:
 - Oracle VM VirtualBox 5.2.44 (https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.exe)
 - WinPcap 4.1.3 (https://www.winpcap.org/install/bin/WinPcap_4_1_3.exe)
-- Wireshark 4.4.6 (https://2.na.dl.wireshark.org/win64/Wireshark-4.4.6-x64.exe)
+- Wireshark 4.4.3 (https://2.na.dl.wireshark.org/win64/Wireshark-4.4.3-x64.exe)
 
 Having installed all the pre-requisites, download the eNSP installation executable (542.2 MB, the file may be too big for a virus scan, download at your own discretion). Check the release on the right hand side of this page, you should find a place to download the executable there. (https://github.com/horserosemilkshake/huawei-ensp/releases/tag/eNSP)
 

@@ -13,8 +13,8 @@ https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.e
 WinPcap 4.1.3
 https://www.winpcap.org/install/bin/WinPcap_4_1_3.exe
 
-Wireshark 4.4.6
-https://2.na.dl.wireshark.org/win64/Wireshark-4.4.6-x64.exe
+Wireshark 4.4.3 
+https://2.na.dl.wireshark.org/win64/Wireshark-4.4.3-x64.exe
 
 安装好所有前置组件后，再下载 eNSP 安装程序（542.2 MB，文件可能过大无法进行病毒扫描，请自行斟酌）。在本页面右侧的 Release 中即可找到该安装文件：
 https://github.com/horserosemilkshake/huawei-ensp/releases/tag/eNSP
